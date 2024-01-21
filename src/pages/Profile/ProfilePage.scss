@@ -1,0 +1,121 @@
+@use '../../sass/functions.scss';
+@use '../../sass/vars.scss';
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__top-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media (max-width: vars.$sm) {
+            justify-content: space-between;
+        }
+
+        @media (max-width: vars.$xs) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__info {
+        position: relative;
+        min-width: 300px;
+        width: functions.percentage(440px, vars.$containerWidth);
+        @media (max-width: vars.$sm) {
+            min-width: fit-content;
+
+        }
+    }
+
+    &__fields {
+        padding: 5px;
+    }
+
+    &__field {
+        display: flex;
+        gap: 55px;
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(76, 19, 87, 0.5);
+        @media (max-width: vars.$md) {
+            padding: 18px 0;
+            gap: 40px;  
+        }
+
+        @media (max-width: vars.$sm) {
+            padding: 12px 0;
+            gap: 40px;  
+        }
+    }
+
+    &__field-value, &__field-key {
+        font-size: functions.toRem(24px);
+        line-height: functions.percentage(32px, 24px);
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(18px);
+        }
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(14px);
+        }
+    }
+
+    &__field-value {
+        font-weight: 600;
+    }
+
+    &__field-key {
+        font-weight: 300;
+    }
+
+    &__avatar-container {
+        margin-bottom: -100px;
+        margin: 0 auto;
+        padding-left: 10px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: vars.$sm) {
+            max-width: 200px;
+        }
+
+        @media (max-width: vars.$xs) {
+            margin: 0 auto;
+        }
+    }
+
+    &__avatar-input {
+        margin-top: 15px;
+
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+    }
+
+    &__avatar {
+        width: 340px;
+        border-radius: 50px;
+        @media (max-width: vars.$sm) {
+            border-radius: 20px;
+            width: 200px;
+        }
+    }
+
+    & .avatar-input {
+        @media (max-width: vars.$sm) {
+            display: none;
+        }
+    }
+
+    &__game-button {
+
+
+        @media (max-width: vars.$sm) {
+            display: none;
+        }
+    }
+}

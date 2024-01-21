@@ -1,0 +1,171 @@
+@use '../../sass/vars';
+@use '../../sass/functions';
+
+.quick-start {
+    position: relative;
+    &__form {
+        margin-top: functions.toRem(60px);
+        @media (max-width: vars.$md) {
+            margin-top: functions.toRem(50px);
+        }
+
+        @media (max-width: vars.$xs) {
+            margin-top: functions.toRem(40px);
+        }
+    }
+    
+    &__modal-title {
+        font-size: functions.toRem(28px);
+        margin-bottom: functions.toRem(35px);
+        width: 90%;
+        text-align: center;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(24px);  
+            margin-bottom: functions.toRem(20px);
+            width: 100%;
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(18px);  
+            margin-bottom: functions.toRem(20px);
+            width: 100%;
+        }
+    }
+
+    &__modal-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: functions.toRem(20px);
+
+        @media (max-width: vars.$md) {
+            gap: functions.toRem(10px);
+        }
+    }
+
+    &__modal-button {
+        padding: functions.toRem(8px) functions.toRem(16px);
+        max-width: 240px;
+
+        @media (max-width: vars.$xs) {
+            padding: functions.toRem(5px) functions.toRem(10px); 
+            font-size: functions.toRem(18px);  
+        }
+    }
+
+    & .modal {
+        &__content {
+            padding: 30px;
+            flex-direction: column;
+        }
+    }
+}
+
+.quick-start .form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: functions.toRem(60px);
+
+    @media (max-width: vars.$md) {
+        gap: functions.toRem(50px);
+    }
+
+    @media (max-width: vars.$xs) {
+        gap: functions.toRem(40px);
+    }
+
+    &__input-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: functions.toRem(12px)
+    }
+
+    &__input {
+        max-width: 400px;
+        font-size: functions.toRem(20px);
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(16px);
+            max-width: 300px;
+        }
+    }
+
+    &__label {
+        margin: 0 auto;
+        color: vars.$purple;
+        font-weight: 600;
+        font-size: functions.toRem(28px);
+        line-height: functions.percentage(36px, 28px);
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(28px);
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(20px);
+        }
+    }
+
+    &__avatar-list {
+        display: flex;
+        max-width: 1000px;
+        overflow-x: auto;
+        padding-bottom: 12px;
+        gap: functions.toRem(35px);
+
+        @media (max-width: vars.$lg) {
+            gap: functions.toRem(30px);
+            max-width: 600px;
+        }
+
+        @media (max-width: vars.$md) {
+            gap: functions.toRem(30px);
+            max-width: 360px;
+        }
+
+        @media (max-width: vars.$xs) {
+            gap: functions.toRem(30px);
+            max-width: 260px;
+        }
+    }
+
+    &__avatar-template {
+        width: 100px;
+
+        @media (max-width: vars.$md) {
+            width: 80px;
+        }
+
+        @media (max-width: vars.$xs) {
+            width: 60px;
+        }
+    }
+
+    &__avatar-container {
+        display: flex;
+        align-items: center;
+        gap: functions.toRem(30px);
+
+        @media (max-width: vars.$xs) {
+            flex-direction: column;
+            gap: functions.toRem(15px);
+        }
+    }
+    
+    &__picked-avatar {
+        width: 140px;
+        
+        @media (max-width: vars.$md) {
+            width: 100px;
+        }
+
+        @media (max-width: vars.$md) {
+            width: 80px;
+        }
+    }    
+}

@@ -1,0 +1,21 @@
+@use '../../../../sass/functions';
+@use '../../../../sass/vars';
+
+.auth-input {
+    position: relative;
+    width: 100%;
+    &__label {
+        margin-left: 30px;
+        font-weight: 200;
+        font-size: functions.toRem(14px);
+        line-height: functions.percentage(19px, 14px);
+
+        @media (max-width: vars.$sm) {
+            display: none;
+        }
+    }
+
+    &__input {
+        width: 100%;
+    }
+}

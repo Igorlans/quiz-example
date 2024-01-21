@@ -1,0 +1,72 @@
+@use '../../../../sass/vars';
+@use '../../../../sass/functions.scss';
+
+.auth-form {
+    &__title {
+        text-align: center;
+        color: vars.$purple;
+        font-size: functions.toRem(48px);
+        font-weight: 700;
+        margin-bottom: 17px;
+        line-height: functions.percentage(65px, 48px);
+
+        @media (max-width: vars.$lg) {
+            font-size: functions.toRem(40px);
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(30px);
+            margin-bottom: 10px;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 45px;
+        @media (max-width: vars.$sm) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form-switch {
+        text-align: center;
+        font-size: functions.toRem(15px);
+        line-height: functions.percentage(16px, 12px);
+        font-weight: 400;
+        color: vars.$purple;
+        flex: 1 1 100px;
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(12px);
+        }
+    }
+
+    &__oauth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__oauth-title {
+        font-weight: 200;
+        font-size: functions.toRem(14px);
+        line-height: functions.percentage(17px, 13px);
+        margin-bottom: 10px;
+
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(12px);  
+        }
+    }
+}

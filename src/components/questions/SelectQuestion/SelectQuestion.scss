@@ -1,0 +1,85 @@
+@use '../../../sass/vars';
+@use '../../../sass/functions';
+
+
+//! Syntax issue (https://stackoverflow.com/questions/73985865/using-container-with-sass-variables)
+
+.select-question { 
+    display: flex;
+    flex-direction: column;   
+    gap: 30px;
+    
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        font-size: functions.toRem(36px);
+        font-weight: 600;
+        color: vars.$purple;
+        margin-top: functions.toRem(30px);
+        max-width: 320px;
+
+        @container (max-width: #{vars.$md}) {
+            font-size: functions.toRem(28px);
+        }
+
+        @container (max-width: #{vars.$xs}) {
+            font-size: functions.toRem(24px);
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: functions.toRem(50px);
+        
+        @container (max-width: #{vars.$sm}) {
+            flex-direction: column;
+            gap: functions.toRem(24px);
+        }
+    }
+    
+
+    &__item {
+        position: relative;
+        margin: 0 auto;
+        width: 160px;
+        aspect-ratio: 1 / 1;
+        max-width: 450px;
+        @container (max-width: #{vars.$md}) {
+            width: 120px;
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            aspect-ratio: auto;
+            width: 100%;
+        }
+    }
+
+    &__option-button {
+        @container (max-width: #{vars.$md}) {
+            font-size: functions.toRem(20px) !important;
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            border-radius: 40px !important;
+        }
+    }
+
+    &__answers {
+        position: absolute;
+        display: flex;
+        gap: functions.toRem(10px);
+        top: 50%;
+        right: -15px;
+        transform: translate(100%, -50%);
+        width: 160px;
+        overflow-x: auto;
+    }
+
+    &__player-answer {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        height: 60px;
+    }
+}

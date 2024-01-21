@@ -1,0 +1,23 @@
+@use '../../sass/functions.scss';
+@use '../../sass/vars.scss';
+
+.title-tour {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__tour-value {
+        color: vars.$purple;
+        font-weight: 700;
+        font-size: functions.toRem(36px);
+        white-space: nowrap;
+        margin-right: 30px;
+    
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(24px);
+            margin-right: 10px;
+        }
+    }
+}
+

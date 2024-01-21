@@ -1,0 +1,99 @@
+@use '../../../sass/functions';
+@use '../../../sass/vars';
+
+.screen {
+    &__content {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: functions.toRem(40px);
+
+        @media (max-width: vars.$md) {
+            grid-template-columns: 1fr; 
+        }
+    }
+    
+    &__waiting-screen {
+        align-self: center !important;
+        position: relative;
+        width: 100%;
+        max-width: 740px;
+        min-width: 400px;
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border: 1px solid vars.$purple;
+
+        @media (max-width: vars.$md) {
+            min-width: 380px;
+            width: 60%;
+        }
+
+        @media (max-width: vars.$xs) {
+            min-width: 280px;
+            border-radius: 30px;
+        }
+    }
+
+    &__waiting-screen-content {
+        z-index: 1000;
+    }
+
+    &__waiting-screen-text {
+        font-size: functions.toRem(36px);
+        line-height: functions.percentage(49px, 36px);
+        color: vars.$purple;
+        font-weight: 700;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(28px);
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(24px);
+        }
+    }
+
+    &__qr-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__share {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: functions.toRem(20px);
+    }
+
+    &__share-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: functions.toRem(5px);
+    }
+
+    &__share-item-title {
+        font-size: functions.toRem(20px);
+        color: vars.$black;
+    }
+
+    &__players-list {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 700px;
+        gap: functions.toRem(45px);
+
+        @media (max-width: vars.$md) {
+            gap: functions.toRem(30px);        
+        }
+    }
+}

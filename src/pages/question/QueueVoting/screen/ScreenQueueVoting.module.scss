@@ -1,0 +1,48 @@
+@use '../../../../sass/functions.scss';
+@use '../../../../sass/vars.scss';
+
+.page-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: functions.toRem(75px) 0;
+    
+    &_result {
+        padding-right: 160px;
+        margin-bottom: functions.toRem(75px);
+        margin-top: functions.toRem(30px);
+    }
+
+    @media (max-width: vars.$md) {
+        margin: functions.toRem(45px) 0;
+    }
+
+    @media (max-width: vars.$xs) {
+        margin: functions.toRem(25px) 0;
+    }
+
+    &__result-title {
+        font-weight: 700;
+        margin-bottom: functions.toRem(35px);
+        font-size: functions.toRem(48px);
+    }
+
+    &__question-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: functions.toRem(30px);
+    }
+
+    &__question {
+        width: 30%;
+        container-type: inline-size;
+        padding: 0 30px;
+    }
+
+    &__timer {
+            flex: 1;
+            align-self: flex-start;
+    } 
+}

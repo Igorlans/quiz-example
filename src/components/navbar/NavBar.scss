@@ -1,0 +1,25 @@
+@use '../../sass/functions.scss';
+@use '../../sass/vars.scss';
+
+.navbar {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+        row-gap: 15px;
+    }
+
+    &__list-item {
+        min-width: 140px;
+        max-width: 250px;
+        white-space: nowrap;
+
+        @media (max-width: vars.$lg) {
+            min-width: 100px;
+        }
+    }
+
+    &__link-button {
+        font-size: functions.toRem(18px);
+    }
+}

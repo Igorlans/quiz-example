@@ -1,0 +1,97 @@
+@use '../../sass/vars';
+@use '../../sass/functions';
+
+.winner-page {
+    &__title {
+        color: vars.$purple;
+        text-align: center;
+        font-size: functions.toRem(96px);
+        text-align: center;
+        font-weight: 900;
+        margin-top: functions.toRem(12px);
+
+        @media (max-width: vars.$lg) {
+            font-size: functions.toRem(80px);   
+        }
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(64px);   
+        }
+
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(48px);   
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(36px);   
+        }
+    }
+
+    &__player {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__player-avatar {
+        width: 200px;
+            
+        @media (max-width: vars.$lg) {
+            width: 150px;
+        }
+
+        @media (max-width: vars.$md) {
+            width: 120px;
+        }
+
+        @media (max-width: vars.$xs) {
+            width: 90px;
+        }
+    }
+    
+    &__player-username {
+        font-size: functions.toRem(40px);
+        font-weight: 700;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(32px);   
+        }
+    }
+
+    &__result-section {
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .star {
+            width: 200px;
+
+            @media (max-width: vars.$md) {
+                width: 150px; 
+            }
+
+            &__score {
+                font-size: functions.toRem(48px);
+            }
+        }
+    }
+
+    &__result-title {
+        font-size: functions.toRem(64px);
+        color: vars.$purple;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 20px;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(48px);
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(36px);
+        }
+    }
+}

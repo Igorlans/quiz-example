@@ -1,0 +1,70 @@
+@use '../../sass/functions';
+@use '../../sass/vars';
+
+
+.player-stars {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__player {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: vars.$md) {
+            gap: 10px;  
+        }
+    }
+
+    &__player-avatar {
+        width: 80px;
+
+        @media (max-width: vars.$md) {
+            width: 70px;   
+        }
+    }
+
+    &__username {
+        font-size: functions.toRem(14px);
+        font-weight: 700;
+        max-width: 120px;
+    }
+
+    &__score {
+        position: absolute;
+        aspect-ratio: 1 / 1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        .star {
+            width: 55px;
+            position: relative;
+            transform: translate(-2px, 15px);
+
+            &__score {
+                font-size: functions.toRem(14px);
+            }
+
+            @media (max-width: vars.$md) {
+                width: 45px;
+            }
+        }
+    }
+
+    &__stars-list {
+        position: relative;
+        display: flex;
+        height: 55px;
+        margin-left: 20px;
+
+        @media (max-width: vars.$md) {
+            height: 45px;
+            margin-left: 15px;
+        }
+    }
+    
+    &__star-container {
+        position: absolute;
+        width: 55px;
+    }
+}

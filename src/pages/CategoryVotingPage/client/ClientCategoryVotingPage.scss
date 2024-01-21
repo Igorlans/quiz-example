@@ -1,0 +1,102 @@
+@use '../../../sass/vars.scss';
+@use '../../../sass/functions.scss';
+
+.client-category {
+    &__title-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__tour {
+        color: vars.$purple;
+        font-weight: 700;
+        font-size: functions.toRem(36px);
+        white-space: nowrap;
+        margin-right: 30px;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(24px);
+            margin-right: 10px;
+        }
+    }
+
+    &__about {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__about-info {
+        padding-right: 20px;
+        max-width: 860px;
+        color: vars.$purple;
+        margin-top: functions.toRem(15px);
+    }
+
+    
+    &__about-title {
+        font-weight: 700;
+        font-size: functions.toRem(36px);
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(24px);
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(14px);
+        }
+    }
+    
+    &__about-text {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: functions.toRem(14px);
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(12px);
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(10px);
+        }
+    }
+
+    &__timer {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__timer-desktop {
+        display: block;
+
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+    }
+
+    &__variants {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: functions.toRem(100px) 0;
+        flex: 1;
+
+        @media (max-width: vars.$md) {
+            margin: functions.toRem(50px) 0;
+        }
+    }
+
+    &__variants-title {
+        text-align: center;
+        margin-bottom: functions.toRem(5px);
+        font-weight: 900;
+        color: vars.$black;
+        font-size: functions.toRem(36px);
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(24px);
+        }
+    }
+}

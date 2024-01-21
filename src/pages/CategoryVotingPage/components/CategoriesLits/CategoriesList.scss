@@ -1,0 +1,51 @@
+@use '../../../../sass/vars.scss';
+@use '../../../../sass/functions.scss';
+
+.categories-list {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    
+    @media (max-width: vars.$md) {
+        gap: 20px;
+    }
+    
+    @media (max-width: vars.$sm) {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__item {
+        width: 160px;
+        height: 160px;
+        aspect-ratio: 1 / 1;
+        max-width: 450px;
+        position: relative;
+
+        @media (max-width: vars.$md) {
+            width: 120px;
+            height: 120px;
+        }
+
+        @media (max-width: vars.$sm) {
+            height: auto;
+        }
+
+        @media (max-width: vars.$sm) {
+            aspect-ratio: auto;
+            width: 100%;
+        }
+    }
+
+    &__votes-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__vote {
+        position: absolute;
+        width: 50px;
+    }
+}

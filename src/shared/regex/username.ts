@@ -1,0 +1,1 @@
+export const usernameRegExp: RegExp = /^[а-яіїєёa-z0-9 ]+$/gi;

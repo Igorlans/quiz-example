@@ -1,0 +1,31 @@
+@use '../../../sass/vars';
+@use '../../../sass/functions';
+
+.screen-results {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    &__title {
+        margin: 20px 0;
+        flex-grow: 1;
+        font-size: functions.toRem(48px);
+        color: vars.$purple;
+
+        @media (max-width: vars.$lg) {
+            font-size: functions.toRem(36px); 
+        }
+
+        @media (max-width: vars.$md) {
+            flex: 0;
+        }
+
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(28px); 
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(24px); 
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@use '../../../sass/vars';
+@use '../../../sass/functions';
+
+.sort-question {
+    &__title {
+        background-color: vars.$yellow;
+        color: vars.$purple;
+        font-size: functions.toRem(24px);
+        width: fit-content;
+        padding: 10px 20px;
+        border-radius: 60px;
+        max-width: 700px;
+        margin: functions.toRem(50px) auto;
+        text-align: center;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(20px);  
+            margin: functions.toRem(30px) auto;
+            padding: 4px 15px;
+        }
+    }
+    
+    &__text {
+        margin-bottom: functions.toRem(30px);
+    }
+
+    &__subject {
+        color: vars.$purple;
+        text-align: center;
+        font-size: functions.toRem(36px);
+        font-weight: 900;
+
+        @container(max-width: #{vars.$md}) {
+            font-size: functions.toRem(32px);
+        }
+    }
+
+    &__hint {
+        font-size: functions.toRem(16px);
+        line-height: functions.percentage(20px, 16px);
+        font-weight: 500;
+        text-align: center;
+
+        @container(max-width: #{vars.$md}) {
+            font-size: functions.toRem(14px);
+        }
+    }
+
+    &__options-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: functions.toRem(20px);
+        justify-content: space-evenly;
+    }
+
+    &__option-button {
+
+        &:hover {
+            @media (pointer: coarse) {
+            
+                background-color: vars.$yellow;
+                color: vars.$purple;
+            }
+        }
+
+        @container (max-width: #{vars.$md}) {
+            font-size: functions.toRem(20px);
+            width: 130px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@use '../../../../sass/functions.scss';
+@use '../../../../sass/vars.scss';
+
+.page-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: functions.toRem(75px) 0;
+
+    &__title {
+        font-size: functions.toRem(48px);
+        font-weight: 300;
+        color: vars.$purple;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(36px);
+        }
+
+        &_bold {
+            font-weight: 900;
+        }
+    }
+
+    &__post-title {
+        margin: 0 auto;
+        border-radius: 110px;
+        background-color: vars.$yellow;
+        text-align: center;
+        padding: 50px 70px;
+        width: 90%;
+        font-size: functions.toRem(24px);
+        margin-top: functions.toRem(50px);
+
+        @media (max-width: vars.$md) {
+            padding: 30px 50px;
+            font-size: functions.toRem(20px);
+        }
+
+        @media (max-width: vars.$sm) {
+            margin-top: functions.toRem(30px);
+            padding: 15px 25px;
+            font-size: functions.toRem(14px);
+        }
+    }
+
+    &__timer {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

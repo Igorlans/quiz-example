@@ -1,0 +1,76 @@
+@use '../../sass/vars';
+@use '../../sass/functions';
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(76, 19, 87, 0.5);
+    height: vars.$headerHeight;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 10000;
+    
+    &__logo {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    &__container {
+        display: grid;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__navbar {
+        margin-left: 4%;
+
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+    }
+
+    &__auth {
+        align-items: center;
+        display: flex;
+        margin-left: auto;
+        padding-left: 15px;
+
+        @media (max-width: vars.$xs) {
+           padding-left: 3%;
+        }
+    }
+
+    &__auth-buttons {
+        color: vars.$purple;
+        display: flex;
+        gap: 8px;
+        margin-right: 30px;
+
+        @media (max-width: vars.$xs) {
+            margin-right: 15px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+    }
+
+    &__auth-text {
+        color: vars.$purple;
+        font-size: functions.toRem(16px);
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(14px);
+        }
+    }
+
+    &__avatar {
+        max-width: 50px;
+    }
+}

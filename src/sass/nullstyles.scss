@@ -1,0 +1,44 @@
+@use './vars';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: vars.$contentFont;
+}
+
+html {
+    font-size: vars.$fontSize;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+    font-family: vars.$titleFont;
+    line-height: 136%;
+}
+
+button, input {
+    background-color: transparent;
+    border: 0;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a {
+    color: vars.$black; 
+    text-decoration: none;   
+}
+
+ul, ol {
+    list-style: none;
+}
+

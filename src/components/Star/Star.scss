@@ -1,0 +1,21 @@
+@use '../../sass/vars';
+@use '../../sass/functions';
+
+.star {
+    background-image: url('../../assets/images/star.png');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    &__score {
+        display: block;
+        font-weight: 900;
+        font-size: functions.toRem(58px);
+        margin-bottom: functions.toRem(-5px);
+        color: vars.$purple;
+    }
+}

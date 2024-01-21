@@ -1,0 +1,62 @@
+@use '../../sass/functions.scss';
+@use '../../sass/vars.scss';
+
+.games {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;    
+
+        @media (max-width: vars.$sm) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        max-width: functions.toRem(940px);
+        margin: functions.toRem(65px) 0 functions.toRem(45px) 0;
+        padding: functions.toRem(65px) functions.toRem(100px);
+        border: 1px solid vars.$purple;
+        border-radius: functions.toRem(50px);
+        row-gap: functions.toRem(60px);
+        column-gap: functions.toRem(40px);
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+
+        @media (max-width: vars.$md) {
+            padding: functions.toRem(50px) functions.toRem(70px);
+        }
+
+        @media (max-width: vars.$sm) {
+            margin-bottom: 0;
+            margin-top: functions.toRem(36px);
+        }
+
+        @media (max-width: vars.$xs) {
+            padding: functions.toRem(30px) functions.toRem(40px);
+        }
+    }
+
+    &__rules-button {
+
+        @media (max-width: vars.$sm) {
+            margin-top: 40px;
+        }
+    }
+}
+
+.games .game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__image {
+        width: 140px;
+    }
+}

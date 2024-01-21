@@ -1,0 +1,66 @@
+@use '../../sass/vars.scss';
+@use '../../sass/functions.scss';
+
+.client-ready {
+
+    &__title-section {
+        display: flex;
+        align-items: center;
+    }
+
+    &__count {
+        font-size: functions.toRem(32px);
+        line-height: functions.percentage(32px, 40px);
+        font-weight: 600;
+        color: vars.$purple;
+        margin-left: functions.toRem(100px);
+
+        @media (max-width: vars.$md) {
+            margin-left: functions.toRem(50px);
+            font-size: functions.toRem(28px);
+        }
+
+        @media (max-width: vars.$xs) {
+            margin-left: functions.toRem(40px);
+            font-size: functions.toRem(24px);
+        }
+    }
+
+    &__players-section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: functions.toRem(60px);
+
+        @media (max-width: vars.$md) {
+            margin-top: functions.toRem(40px);
+        }
+    }
+    
+    &__players-title {
+        font-size: functions.toRem(48px);
+        text-align: center;
+        margin-bottom: functions.toRem(50px);
+
+        @media (max-width: vars.$md) {
+            margin-bottom: functions.toRem(40px);
+            font-size: functions.toRem(40px);
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(32px);
+        }
+    }
+
+    &__players-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 700px;
+        gap: functions.toRem(45px);
+
+        @media (max-width: vars.$md) {
+            gap: functions.toRem(30px);        
+        }
+    }
+}

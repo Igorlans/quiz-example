@@ -1,0 +1,78 @@
+@use '../../sass/vars';
+@use '../../sass/functions';
+
+.end-page {
+    &__title {
+        color: vars.$purple;
+        text-align: center;
+        font-size: functions.toRem(96px);
+        text-align: center;
+        font-weight: 900;
+        margin-top: functions.toRem(12px);
+
+        @media (max-width: vars.$lg) {
+            font-size: functions.toRem(80px);   
+        }
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(64px);   
+        }
+
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(48px);   
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(36px);   
+        }
+    }
+
+    &__content {
+        margin-top: functions.toRem(45px);
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        @media (max-width: vars.$md) {
+            margin-top: functions.toRem(30px); 
+            flex-direction: column;   
+            align-items: center;
+        }
+
+        @media (max-width: vars.$xs) {
+            margin-top: functions.toRem(20px);    
+        }
+    }
+
+    &__donate {
+        max-width: 460px;
+        
+        @media (max-width: vars.$md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__donate-text {
+        font-size: functions.toRem(36px);
+        line-height: functions.percentage(49px, 36px);
+        font-weight: 700;
+        margin-bottom: 25px;
+
+        @media (max-width: vars.$md) {
+            font-size: functions.toRem(24px);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: vars.$xs) {
+            font-size: functions.toRem(20px);
+            margin-bottom: 10px;
+        }
+    }
+
+    &__donate-link {
+        width: fit-content;
+    }
+}

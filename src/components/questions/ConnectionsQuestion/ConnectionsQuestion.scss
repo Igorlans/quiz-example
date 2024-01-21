@@ -1,0 +1,183 @@
+@use '../../../sass/vars';
+@use '../../../sass/functions';
+
+.connections-question {
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        font-size: functions.toRem(36px);
+        font-weight: 600;
+        color: vars.$purple;
+        margin-top: functions.toRem(30px);
+        max-width: 320px;
+
+        @container (max-width: #{vars.$md}) {
+            font-size: functions.toRem(28px);
+        }
+
+        @container (max-width: #{vars.$xs}) {
+            font-size: functions.toRem(24px);
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @container (max-width: #{vars.$md}) {
+        gap: functions.toRem(24px);
+    }
+
+    &__side {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        @container (max-width: #{vars.$md}) {
+            margin-left: -70px;
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            margin-left: -60px;
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            margin-left: -50px;
+        }
+    }
+
+    &__left & { 
+        &__option-button {
+            @container (max-width: #{vars.$md}) {
+                display: flex !important;
+                justify-content: end; 
+            }
+        }
+
+        &__side-title {
+            justify-content: start;
+            text-align: left;
+        }
+
+        &__button-text {
+            @container (max-width: #{vars.$md}) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        @container (max-width: #{vars.$md}) {
+            margin-right: -70px;
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            margin-right: -60px;
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            margin-right: -50px;
+        }
+    }
+
+    &__right & {
+        &__side-title {
+            justify-content: end;
+            text-align: right;
+        }
+
+        &__button-text {
+            @container (max-width: #{vars.$md}) {
+                text-align: right;
+            }
+        }
+    }
+
+    &__side-title {
+        display: flex;
+        color: vars.$purple;
+        margin-bottom: functions.toRem(32px);
+        font-weight: 600;
+        font-size: functions.toRem(28px);
+        width: 240px;
+        padding: 0 20px;
+        
+
+        @container (max-width: #{vars.$md}) {
+            font-size: functions.toRem(24px);
+            margin-bottom: functions.toRem(20px);
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            font-size: functions.toRem(18px);
+            margin-bottom: functions.toRem(16px);
+            width: 215px;
+        }
+
+        @container (max-width: #{vars.$xs}) {
+            font-size: functions.toRem(14px);
+            margin-bottom: functions.toRem(12px);
+            width: 150px;
+            
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: functions.toRem(40px);
+        width: 300px;
+
+        @container (max-width: #{vars.$md}) {
+            gap: functions.toRem(24px);
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            width: 250px;
+        }
+
+        @container (max-width: #{vars.$xs}) {
+            width: 180px;
+        }
+    }
+
+    &__option-button {
+        @container (max-width: #{vars.$sm}) {
+            padding: functions.toRem(8px) functions.toRem(20px);
+            min-height: 50px;
+        }
+    }
+
+    &__button-text {
+        line-height: 120%;
+        text-align: center;
+
+        @container (max-width: #{vars.$md}) {
+            width: 190px;
+            font-size: functions.toRem(20px);
+        }
+
+        @container (max-width: #{vars.$sm}) {
+            width: 175px;
+            font-size: functions.toRem(18px);
+        }
+
+        @container (max-width: #{vars.$xs}) {
+            font-size: functions.toRem(14px);
+            width: 105px;
+        }
+    }
+}

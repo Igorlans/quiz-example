@@ -1,0 +1,66 @@
+@use '../../sass/vars';
+@use '../../sass/functions';
+
+.share-link {
+    background-color: #fff;
+    overflow: hidden;
+    max-width: 300px;
+    border: 1px solid vars.$black;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: functions.toRem(6px) functions.toRem(12px);
+
+    @media (max-width: vars.$sm) {
+        padding: functions.toRem(4px) functions.toRem(10px);
+    }
+    
+
+    &__value {
+        padding-right: 5px;
+        width: 180px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        font-weight: 200;
+        font-size: functions.toRem(14px);
+        @media (max-width: vars.$sm) {
+            font-size: functions.toRem(12px);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        width: 80px;
+        justify-content: space-around;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            left: 0;
+            top: -50px;
+            bottom: -50px;
+            background-color: vars.$black;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        color: vars.$purple;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(.9);
+        }
+    }
+}

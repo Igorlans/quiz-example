@@ -1,0 +1,24 @@
+@use '../../../../../sass/functions.scss';
+@use '../../../../../sass/vars.scss';
+
+.content {
+    background-color: #fff;
+    transition: .5s;
+    border: 12px solid vars.$purple;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: functions.toRem(36px);
+    align-items: center;
+    aspect-ratio: 16/9;
+    width: 50%;
+    max-width: 660px;
+    min-width: 400px;
+    text-align: center;
+    padding: 0 20px;
+
+    &_highlight {
+        background-color: vars.$yellow;
+    }
+}

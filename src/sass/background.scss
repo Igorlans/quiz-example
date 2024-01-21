@@ -1,0 +1,271 @@
+@use './vars';
+
+.bg {
+    &__image {
+        position: absolute;
+        z-index: -20;
+        & img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__thunder {
+        min-width: 140px;
+        width: 15vw;
+    }
+
+    &__cup {
+        min-width: 130px;
+        width: 15vw;
+    }
+    
+    &__heart {
+        min-width: 200px;
+        width: 25vw;
+    }
+    
+    &__variant-1 &__thunder {
+        right: -3%;
+        top: 10%;
+        transform: rotate(60deg);
+        @media (max-width: vars.$sm) {
+            right: -5%;
+            top: 30%;
+            transform: rotate(70deg);
+        }
+    }
+
+    &__variant-1 &__cup {
+        top: 0;
+        right: 28%;
+        @media (max-width: vars.$sm) {
+           top: 15%;
+        }
+    }
+
+    &__variant-1 &__heart {
+        right: 25%;
+        top: 40%;
+        @media (max-width: vars.$sm) {
+            left: -10%;
+            top: auto;
+            bottom: 30%;
+        }
+    }
+
+    &__variant-1 &__ellipse {
+        z-index: -10;
+        bottom: 0;
+        right: 0;
+        min-width: 400px;
+        width: 40vw;
+        // move beneath because image has gap
+        transform: translateY(1%);
+
+        @media (max-width: vars.$sm) {
+            display: none;
+        }
+    }
+
+    &__variant-1 &__hand {
+        z-index: -2;
+        min-width: 700px;
+        width: 65vw;
+        z-index: -10;
+        bottom: 0%;
+        right: -15%;
+        // move beneath because image has gap
+        transform: translateY(1%);
+
+        @media (max-width: vars.$lg) {
+            width: 50vw;
+            min-width: 600px;
+
+        }
+
+        @media (max-width: vars.$sm) {
+            width: 40vw;
+            bottom: 110px;
+            right: -120px;
+            min-width: 500px;
+
+        }
+
+        @media (max-width: vars.$xs) {
+            width: 20vw;
+            bottom: 90px;
+        }
+    }
+
+    &__variant-2 &__thunder {
+        top: 0;
+        right: 0;
+    }
+
+    &__variant-2 &__cup {
+        bottom: 0;
+        right: 0;
+    }
+
+    &__variant-2 &__heart {
+        width: 30vw;
+        top: 10vh;
+        left: -12vw;
+
+        @media (max-width: vars.$sm) {
+            top: 32vh;
+        }
+    }
+
+    &__variant-3 &__thunder {
+        transform: rotate(0deg);
+        top: 3%;
+        right: 3%;
+        min-width: 200px;
+
+        @media (max-width: vars.$md) {
+            transform: scaleX(-1);
+            right: -50px;
+            min-width: 150px;
+        }
+    }
+
+    &__variant-3 &__cup {
+        top: 10%;
+        left: 0;
+
+        min-width: 250px;
+
+        @media (max-width: vars.$md) {
+            top: 30%;
+            right: 0;
+            left: auto;
+            min-width: 150px;
+        }
+    }
+
+    &__variant-3 &__heart {
+        width: 25vw;
+        left: 15%;
+        bottom: -20%;
+        min-width: 200px;
+
+        @media (max-width: vars.$md) {
+            top: 20%;
+            left: -50px;
+            min-width: 180px;
+        }
+    }
+
+    &__variant-3 &__thunder-2,
+    &__variant-3 &__cup-2,
+    &__variant-3 &__heart-2 {
+        display: none;
+        
+        @media (max-width: vars.$md) {
+            display: block;
+        }
+    }
+
+    &__variant-3 &__thunder-2 {
+        top: 50%;
+        left: -5%;
+        min-width: 150px;
+        transform: scaleX(-1) rotate(60deg);
+        width: 20vw;
+    }
+
+    &__variant-3 &__cup-2 {
+        bottom: 5%;
+        left: 0;
+        transform: rotate(60deg);
+        min-width: 150px;
+        width: 20vw;
+    }
+
+    &__variant-3 &__heart-2 {
+        transform: scaleX(-1);
+        bottom: 20%;
+        right: -50px;
+        min-width: 180px;
+        width: 20vw;
+    }
+
+    &__variant-4 &__thunder {
+        top: 3%;
+        right: 3%;
+    }
+
+    &__variant-4 &__cup {
+        bottom: 0;
+        left: 0;
+        min-width: 250px;
+        max-width: 500px;
+        width: 25vw;
+
+        @media (max-widtH: vars.$md) {
+            left: auto;
+
+            right: 0;
+            bottom: 0;
+            min-width: 160px;
+        }
+    }
+
+    &__variant-4 &__heart {
+        min-width: 150px;
+        max-width: 350px;
+        right: 10%;
+        bottom: -5%;
+
+        @media (max-widtH: vars.$md) {
+            right: auto;
+            bottom: auto;
+
+            left: 0;
+            top: 40%;
+        }
+    }
+
+    &__variant-5 &__thunder {
+        max-width: 320px;
+        width: 30vw;
+        top: 3%;
+        right: 3%;  
+
+        @media (max-width: vars.$md) {
+            transform: scaleX(-1);
+            right: -50px;
+            min-width: 150px;
+        }
+    }
+
+    &__variant-5 &__cup {
+        max-width: 400px;
+        width: 30vw;
+        left: 3%;
+        top: 30%;
+
+        
+        @media (max-width: vars.$md) {
+            top: 70%;
+            right: 0;
+            left: auto;
+            min-width: 150px;
+        } 
+    }
+
+    &__variant-5 &__heart {
+       right: 12%;
+       bottom: 20%;
+
+        @media (max-width: vars.$md) {
+            top: 40%;
+            left: -50px;
+            min-width: 180px;
+        }
+    }
+
+
+}

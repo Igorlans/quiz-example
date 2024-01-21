@@ -1,0 +1,18 @@
+@use '../../sass/functions';
+@use '../../sass/vars';
+
+.players-section {
+    position: relative;
+    &__list {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 700px;
+        gap: functions.toRem(45px);
+
+        @media (max-width: vars.$md) {
+            gap: functions.toRem(30px);        
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@use '../../sass/vars';
+
+.burger {
+    display: none;
+
+    @media (max-width: vars.$md) {
+        display: block;
+    }
+
+    
+    &__content, &__backdrop {
+        z-index: 1000;
+        transition: .5s;
+        position: fixed;
+        left: -100vw;
+        top: vars.$headerHeight;
+        z-index: 2000;
+        max-width: 100vw;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    &.active &__content,  &.active &__backdrop {
+        left: 0;
+    }
+
+    &__content {
+        display: flex;
+        margin-top: 10%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+
+    }
+    
+
+    &__button {
+        position: relative;
+        margin-right: 20px;
+        width: 40px;
+        height: 30px;
+    }
+
+    &__button-line {
+        left: 0;
+        position: absolute;
+        transition: .3s;
+        width: 100%;
+        height: 15%;
+        border-radius: 3.5px;
+        background-color: vars.$yellow;
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2), &:nth-child(4) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+        }
+
+        &:nth-child(4) {
+            opacity: 0;
+        }
+    }
+
+    &.active &__button > &__button-line {
+        background-color: vars.$purple;
+    }
+
+    &.active &__button-line {
+        &:nth-child(1), &:nth-child(3) {
+            opacity: 0;
+        }
+
+        &:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(4) {
+            transform: rotate(-45deg);
+            opacity: 1;
+        }
+    }
+}
+
+.burger .navbar {
+    width: 70%;
+
+    &__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list-item {
+        width: 100%;
+        max-width: 400px;
+        min-width: 300px;
+    }
+
+    &__link-button {
+        background-color: vars.$purple;
+        color: #fff;
+        padding: 7px 0;
+    }
+}

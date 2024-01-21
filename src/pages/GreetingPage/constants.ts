@@ -1,0 +1,1 @@
+export const SHOW_GREETING_TIMEOUT = 5_000;

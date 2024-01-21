@@ -1,0 +1,29 @@
+@use '../../../../sass/functions.scss';
+@use '../../../../sass/vars.scss';
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.page-content {
+    flex: 1;
+    
+    &__timer {
+        margin: 20px auto;
+    }
+
+    &__question-container {
+        container-type: inline-size;
+        margin: functions.toRem(50px) 0;
+
+        @media (max-width: vars.$sm) {
+            margin: functions.toRem(35px) 0;   
+        }
+
+        @media (max-width: vars.$xs) {
+            margin: functions.toRem(20px) 0;   
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use './vars';
+@use "sass:math";
+
+@function toRem($value) {
+    $remValue: math.div($value, vars.$fontSize) + rem; 
+    @return $remValue;
+}
+
+@function percentage($value, $from) {
+    @return math.percentage(math.div($value, $from));
+}

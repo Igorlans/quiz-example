@@ -1,0 +1,38 @@
+@use '../../sass/vars.scss';
+@use '../../sass/functions.scss';
+
+.title {
+    font-size: functions.toRem(36px);
+    line-height: functions.percentage(49px, 36px);
+    font-weight: 900;
+
+    @media (max-width: vars.$sm) {
+        font-size: functions.toRem(24px);
+    }
+
+    &__container {
+        position: relative;
+        width: 80%;
+        max-width: 590px;
+        min-width: none;
+        padding: 1rem 1rem 1rem 0;
+        background-color: vars.$yellow;
+        color: vars.$black;
+        @media (max-width: vars.$sm) {
+            padding: 3px 0;
+        }
+
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            background-color: vars.$yellow;
+            height: 100%; 
+            width: 100vw;
+            left: 0;
+            top: 0;
+            transform: translateX(-99%);
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+@use '../../sass/functions.scss';
+@use '../../sass/vars.scss';
+
+.auth-page {
+    width: 100%;
+
+    & .main-page {
+        height: 100%;
+    }
+   
+    &__form-modal {
+        padding: 35px 100px;
+        width: fit-content;
+        min-width: 280px;
+        max-width: 500px;
+
+        @media (max-width: vars.$sm) {
+            padding: 25px 60px;
+        }
+
+        @media (max-width: vars.$sm) {
+            padding: 15px 40px;
+        }
+    }
+}
